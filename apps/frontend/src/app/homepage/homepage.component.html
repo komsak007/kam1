@@ -1,0 +1,15 @@
+<p>homepage works!</p>
+
+<input
+  #nameInput
+  type="text"
+  [value]="newTodo"
+  (change)="newTodo = nameInput.value"
+/>
+<button (click)="addTodo()">Add Todo</button>
+<hr />
+<ul>
+  <li *ngFor="let todo of todos" (click)="deleteTodo(todo._id)">
+    {{ todo.name }}
+  </li>
+</ul>
